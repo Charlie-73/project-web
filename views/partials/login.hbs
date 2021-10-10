@@ -1,0 +1,50 @@
+{{> head}}
+{{> navbar}}
+
+{{isLogin}}
+
+<body>
+<div class="table">
+  <div class="form">
+    <form class="row g-3 needs-validation" action="" method="POST" novalidate>
+    <h2>Login Form</h2>
+    <div class="input__box"> 
+        <input type="text" placeholder="Username"> 
+      </div> 
+      <div class="input__box">
+        <input type="password" placeholder="Password"> 
+      </div> 
+      <div class="input__box"> 
+        <button type="submit" class="btn">Login</button>
+      </div> 
+      <p class="forget">Forgot Password? <a href="#">Click Here</a></p> 
+      <p class="forget">Don't have an account? 
+      <a href="Register">Sign Up</a></p>
+
+    </form>
+  </div>
+</div> 
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})
+</script>
+</body>
